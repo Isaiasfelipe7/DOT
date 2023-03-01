@@ -1,9 +1,9 @@
-#8. Escreva uma função que lê um caractere digitado pelo usuário e retorna este caractere somente se ele for igual a 'S' ou 'N'. Se o
+#Lista_Questão 08. Escreva uma função que lê um caractere digitado pelo usuário e retorna este caractere somente se ele for igual a 'S' ou 'N'. Se o
 # caractere não for nem 'S' nem 'N', a função imprime a mensagem 'Caractere inválido. Digite novamente'. Use esta função em um
 # programa que fica lendo do usuário um número qualquer e imprime este número ao cubo na tela. O programa deve ficar lendo os
 # números até que o usuário responder 'N' à pergunta se ele deseja continuar ou não.
 
-def sim_nao():
+def caractere():
     while True :
         resposta = str(input("Digite 'S' para Sim ou 'N' para Não: ").upper())
         if resposta == 'S' or resposta == 'N':
@@ -14,12 +14,13 @@ def sim_nao():
 def main():
 
     while True:
-        num = float(input('Digite um número: '))
-        print(num ** 3)
+        numero = float(input('Informe o número: '))
+        cubo = numero ** 3
+        print(f'O número {numero:.0f} ao cubo é {cubo}')
 
-        continuar = sim_nao()
+        conti = caractere()
 
-        if continuar ==  'N':
+        if conti ==  'N':
             break
 
 if __name__ == '__main__':

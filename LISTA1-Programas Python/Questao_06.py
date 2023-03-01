@@ -1,32 +1,32 @@
-#6. Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Faça um procedimento
+#Lista1_Questão 06. Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Faça um procedimento
 # que receba como parâmetro o número de lados e a medida do lado deste polígono e calcule e imprima o seguinte:
 # - Se o número de lados for igual a 3, escrever TRIÂNGULO e o valor do seu perímetro.
 # - Se o número de lados for igual a 4, escrever QUADRADO e o valor da sua área.
 # - Se o número de lados for igual a 5, escrever PENTÁGONO.
 
-def peri_tri(lados, medida):
-    perimetro = lados * medida
+def triangulo_perimetro(lados, medida):
+    p = lados * medida
 
-    return perimetro
+    return p
 
-def area_quadrado(lados, medida):
-    area = medida ** 2
+def quadrado_area(lados, medida):
+    a = medida ** 2
 
-    return area
+    return a
 
 def main():
 
-    lados =  int(input('Digite o número de lados do polígono: '))
-    medida = int(input('Digite a medida de lados (em cm): '))
+    lados_poligono =  int(input('Informe o número de lados do polígono: '))
+    medida_do_lado = int(input('Informe a medida de lados: '))
 
-    if lados == 3:
-        print(f'TRIÂNGULO\nPerimetro: {peri_tri(lados, medida)} cm')
+    if lados_poligono == 3:
+        print(f'TRIÂNGULO\nPerimetro: {triangulo_perimetro(lados_poligono, medida_do_lado)} cm')
 
-    elif lados == 4:
-        print(f'QUADRADO\nÁrea: {area_quadrado(lados, medida)} cm²')
+    elif medida_do_lado == 4:
+        print(f'QUADRADO\nÁrea: {quadrado_area(lados_poligono, medida_do_lado)} cm²')
 
     else:
-        if lados == 5:
+        if lados_poligono == 5:
             print(f'PENTÁGONO')
 
 if __name__ == '__main__':

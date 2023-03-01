@@ -1,4 +1,4 @@
-#5. Faça um programa que leia a altura e o sexo (codificado da seguinte forma:
+#Lita1_Questão 05. Faça um programa que leia a altura e o sexo (codificado da seguinte forma:
 # 1:feminino 2:masculino) de uma pessoa. Depois faça uma função chamada peso ideal que receba a altura e o sexo via parâmetro e
 # que calcule e retorne seu peso ideal, utilizando as seguintes fórmulas:
 #      - para Homens: (72.7 * h) - 58
@@ -15,7 +15,7 @@ def peso_ideal(altura, sexo):
 
 def main():
 
-    altura = float(input('Digite sua altura: '))
+    altura = float(input('Informe a sua altura: '))
     sexo = int(input('Digite seu sexo (1 para Feminino e 2 para Masculino): '))
 
     peso = peso_ideal(altura, sexo)

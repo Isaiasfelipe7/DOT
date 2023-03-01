@@ -1,20 +1,20 @@
-#12. Escreva uma função que recebe, por parâmetro, um valor inteiro e positivo e retorna o somatório desse valor.
+#Lista1_Questão 12. Escreva uma função que recebe, por parâmetro, um valor inteiro e positivo e retorna o somatório desse valor.
 
 def somatorio(x):
     soma = 0
 
-    for i in range(1, x+1):
-        soma += i
+    for b in range(1, x+1):
+        soma += b
     
     return soma
 
 def main():
 
-    num = int(input('Digite um valor inteiro positivo: '))
+    numero = int(input('Informe um valor inteiro positivo: '))
 
-    soma = somatorio(num)
+    soma = somatorio(numero)
 
-    print(f'O somatório de {num} é {soma}')
+    print(f'O somatório de {numero} é {soma}')
 
 if __name__ == '__main__':
     main()
