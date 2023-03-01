@@ -1,4 +1,4 @@
-#Lista1_Questão0 1. Faça uma função que recebe um número inteiro por parâmetro e retorna verdadeiro se ele for par e falso se for ímpar.
+#Lista1_Questão 01. Faça uma função que recebe um número inteiro por parâmetro e retorna verdadeiro se ele for par e falso se for ímpar.
 
 def par_impar(num):
     if num % 2 == 0:
