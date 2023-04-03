@@ -14,14 +14,15 @@ def caractere():
 def main():
 
     while True:
-        numero = float(input('Informe o número: '))
-        cubo = numero ** 3
-        print(f'O número {numero:.0f} ao cubo é {cubo}')
+        try:
+            numero = int(input('Informe o número: '))
+            cubo = numero ** 3
+            print(f'O número {numero} ao cubo é {cubo}')
 
-        conti = caractere()
-
-        if conti ==  'N':
-            break
+            if caractere() ==  'N':
+                break
+        except:
+           print('Número inválido. Tente novamente')
 
 if __name__ == '__main__':
     main()

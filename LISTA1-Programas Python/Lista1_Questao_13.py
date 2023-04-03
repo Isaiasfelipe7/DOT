@@ -11,11 +11,16 @@ def calcular_valor(n):
 
 def main():
 
-    valor_int = int(input('Informe o valor de N: '))
+    while True:
+        try:
+            valor_int = int(input('Informe o valor de N: '))
 
-    valor_s = calcular_valor(valor_int)
+            valor_s = calcular_valor(valor_int)
 
-    print(f'O valor de S é {valor_s:.2f}')
+            print(f'O valor de S é {valor_s:.2f}')
+            break
+        except:
+            print('Digite um valor inteiro. Tente Novamente.')
 
 if __name__ == '__main__':
     main()
