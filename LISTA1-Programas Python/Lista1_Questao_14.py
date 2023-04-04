@@ -11,13 +11,13 @@ def calcular_valor(n):
 
     return s
 
-def main():
+while True:
+    try:
+        valor_int = int(input('Informe o valor de N: '))
 
-    valor_int = int(input('Informe o valor de N: '))
+        valor_s = calcular_valor(valor_int)
 
-    valor_s = calcular_valor(valor_int)
-
-    print(f'O Valor de S é {valor_s:.2f}')
-
-if __name__ == '__main__':
-    main()
+        print(f'O Valor de S é {valor_s:.2f}')
+        break
+    except:
+        print('Número inválido. Tente Novamente!')

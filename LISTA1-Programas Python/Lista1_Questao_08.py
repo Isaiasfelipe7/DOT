@@ -4,25 +4,18 @@
 # números até que o usuário responder 'N' à pergunta se ele deseja continuar ou não.
 
 def caractere():
-    while True :
-        resposta = str(input("Digite 'S' para Sim ou 'N' para Não: ").upper())
-        if resposta == 'S' or resposta == 'N':
-            return resposta
-        else:
-            print(f'Caractere inválido. Digite novamente.')
+    x = input('Deseja continuar (S - Sim ou N - Não)?? ').upper()
+    while x != 'S' and x != 'N':
+        x = input('Caractere inválido. Tente novamente: ').upper()
 
-def main():
+    return x
 
-    while True:
-        try:
-            numero = int(input('Informe o número: '))
-            cubo = numero ** 3
-            print(f'O número {numero} ao cubo é {cubo}')
+while True:
+    try:
+        numero = int(input('Informe o número: '))
+        print('O cubo do número %d é %d' %(numero, numero**3))
 
-            if caractere() ==  'N':
-                break
-        except:
-           print('Número inválido. Tente novamente')
-
-if __name__ == '__main__':
-    main()
+        if caractere() ==  'N':
+            break
+    except:
+        print('Número inválido. Tente novamente')

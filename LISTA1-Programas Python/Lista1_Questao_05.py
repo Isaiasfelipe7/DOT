@@ -13,14 +13,14 @@ def peso_ideal(altura, sexo):
 
     return peso_ideal
 
-def main():
+while True:
+    try:
+        altura = float(input('Informe a sua altura: '))
+        sexo = int(input('Digite seu sexo (1 para Feminino e 2 para Masculino): '))
 
-    altura = float(input('Informe a sua altura: '))
-    sexo = int(input('Digite seu sexo (1 para Feminino e 2 para Masculino): '))
+        peso = peso_ideal(altura, sexo)
 
-    peso = peso_ideal(altura, sexo)
-
-    print(f'O seu peso ideal é {peso:.2f} kg')
-
-if __name__ == '__main__':
-    main()
+        print(f'O seu peso ideal é {peso:.2f} kg')
+        break
+    except:
+        print('Número inválido. Tente Novamente!')

@@ -12,12 +12,12 @@ def Perimetro(raio):
 
     return perimetro
 
-def main():
+while True:
+    try:
+        raio_circulo = int(input('Digite o raio do círculo : '))
 
-    raio_circulo = int(input('Digite o raio do círculo : '))
-
-    print(f'A área do circulo é {Area(raio_circulo):.2f}')
-    print(f'O perímetro do círculo é {Perimetro(raio_circulo):.2f}')
-
-if __name__ == '__main__':
-    main()
+        print(f'A área do circulo é {Area(raio_circulo):.2f}')
+        print(f'O perímetro do círculo é {Perimetro(raio_circulo):.2f}')
+        break
+    except:
+        print('Número inválido. Tente Novamente!')

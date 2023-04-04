@@ -8,18 +8,13 @@ def somatorio(x):
     
     return soma
 
-def main():
+while True:
+    try:
+        numero = int(input('Informe um valor inteiro positivo: '))
 
-    while True:
-        try:
-            numero = int(input('Informe um valor inteiro positivo: '))
+        soma = somatorio(numero)
 
-            soma = somatorio(numero)
-
-            print(f'O somatório de {numero} é {soma}')
-            break
-        except:
-            print('Digite um valor inteiro. Tente Novamente.')
-
-if __name__ == '__main__':
-    main()
+        print(f'O somatório de {numero} é {soma}')
+        break
+    except:
+        print('Digite um valor inteiro. Tente Novamente.')

@@ -6,14 +6,13 @@ def celsius(tmp):
 
     return celsius
 
-def main():
+while True:
+    try:
+        graus_fahremheit = float(input('Informe a temperatura em graus Fahrenheit: '))
 
-    graus_fahremheit = float(input('Informe a temperatura em graus Fahrenheit: '))
+        cels = celsius(graus_fahremheit)
 
-    cels = celsius(graus_fahremheit)
-
-    print(f'A temperatura Fahrenheit = {graus_fahremheit}, em graus Célsius é {cels:.1f}°.')
-
-
-if __name__ == '__main__':
-    main()
+        print(f'A temperatura Fahrenheit = {graus_fahremheit}, em graus Célsius é {cels:.1f}°.')
+        break
+    except:
+        print('Número inválido. Tente Novamente!')

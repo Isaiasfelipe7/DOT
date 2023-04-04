@@ -14,20 +14,21 @@ def quadrado_area(lados, medida):
 
     return a
 
-def main():
+while True:
+    try:
+        lados_poligono =  int(input('Informe o número de lados do polígono: '))
+        medida_do_lado = int(input('Informe a medida de lados: '))
 
-    lados_poligono =  int(input('Informe o número de lados do polígono: '))
-    medida_do_lado = int(input('Informe a medida de lados: '))
-
-    if lados_poligono == 3:
-        print(f'TRIÂNGULO\nPerimetro: {triangulo_perimetro(lados_poligono, medida_do_lado)} cm')
-
-    elif medida_do_lado == 4:
-        print(f'QUADRADO\nÁrea: {quadrado_area(lados_poligono, medida_do_lado)} cm²')
-
-    else:
-        if lados_poligono == 5:
-            print(f'PENTÁGONO')
-
-if __name__ == '__main__':
-    main()
+        if lados_poligono == 3:
+            print(f'TRIÂNGULO\nPerimetro: {triangulo_perimetro(lados_poligono, medida_do_lado)} cm')
+            break
+        elif lados_poligono == 4:
+            print(f'QUADRADO\nÁrea: {quadrado_area(lados_poligono, medida_do_lado)} cm²')
+            break
+        elif lados_poligono == 5:
+            print('PENTÁGONO')
+            break
+        else:
+            print('Polígono não suportado.')
+    except:
+        print('Número inválido. Tente Novamente!')

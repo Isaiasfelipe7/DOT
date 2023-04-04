@@ -9,18 +9,13 @@ def divisores(x):
 
     return quantidade
 
-def main():
+while True:
+    try:
+        valor_int = int(input('Digite um valor inteiro positivo: '))
 
-    while True:
-        try:
-            valor_int = int(input('Digite um valor inteiro positivo: '))
+        quantidade = divisores(valor_int)
 
-            quantidade = divisores(valor_int)
-
-            print(f'A quantidade de divisores de {valor_int} é {quantidade}')
-            break
-        except:
-            print('Digite um valor inteiro. Tente Novamente')
-
-if __name__ == '__main__':
-    main()
+        print(f'A quantidade de divisores de {valor_int} é {quantidade}')
+        break
+    except:
+        print('Digite um valor inteiro. Tente Novamente')

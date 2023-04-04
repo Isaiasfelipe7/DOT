@@ -11,13 +11,13 @@ def fatorial(f):
 
     return fat
 
-def main():
+while True:
+    try:
+        num = int(input('Digite um número para saber seu fatorial: '))
 
-    num = int(input('Digite um número para saber seu fatorial: '))
+        fat = fatorial(num)
 
-    fat = fatorial(num)
-
-    print(f'O Fatorial de {num} é: {fat}')
-
-if __name__ == '__main__':
-    main()
+        print(f'O Fatorial de {num} é: {fat}')
+        break
+    except:
+        print('Número inválido. Tente Novamente!')

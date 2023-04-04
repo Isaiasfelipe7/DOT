@@ -6,20 +6,15 @@ def par_impar(num):
     else:
         return False
 
-def main():
+while True:
+    try:
+        num = int(input('Digite um número: '))
 
-    while True:
-        try:
-            num = int(input('Digite um número: '))
-
-            if par_impar(num):
-                print("\nO numero %d é par." %num)
-
-            else:
-                print("\nO numero %d é impar." %num)
-                break
-        except:
-            print('Número inváido. Tente Novamente.')
-
-if __name__ == '__main__':
-    main()
+        if par_impar(num):
+            print("\nO numero %d é par." %num)
+            break
+        else:
+            print("\nO numero %d é impar." %num)
+            break
+    except:
+        print('Número inváido. Tente Novamente.')

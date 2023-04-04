@@ -8,18 +8,18 @@ def nota_avaliaçoes(n1, n2):
 
     return med
 
-def main():
+while True:
+    try:
+        nota1 = float(input('Informe a Primeira nota: '))
+        nota2 = float(input('Informe a Segunda nota: '))
 
-    nota1 = float(input('Informe a Primeira nota: '))
-    nota2 = float(input('Informe a Segunda nota: '))
+        media = nota_avaliaçoes(nota1, nota2)
 
-    media = nota_avaliaçoes(nota1, nota2)
-
-    if media >= 6.0:
-        print(f'Sua média semestral é {media:.1f}\nPARABÉNS! Você foi aprovado!')
-
-    else:
-        print(f'Sua média semestral é {media:.1f}')
-
-if __name__ == '__main__':
-    main()
+        if media >= 6.0:
+            print(f'Sua média semestral é {media:.1f}\nPARABÉNS! Você foi aprovado!')
+            break
+        else:
+            print(f'Sua média semestral é {media:.1f}')
+            break
+    except:
+        print('Número inválido. Tente Novamente!')
