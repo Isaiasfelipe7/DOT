@@ -31,4 +31,3 @@ assert idade(47) == 'Adulto'
 assert idade(22) == 'Adulto'
 
 print('Todos testes ok!')
-
