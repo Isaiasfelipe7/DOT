@@ -1,3 +1,8 @@
+""" Lista3_q4. Faça uma função que recebe por parâmetro o tempo de duração de um
+processo em uma fábrica expressa em segundos e retorna também por
+parâmetro esse tempo em horas, minutos e segundos.
+"""
+
 def tempo(seg):
     if type(seg) != int or seg <= 0:
         return Exception
@@ -19,4 +24,4 @@ assert tempo(-7) == Exception # Testando valor improvável
 assert tempo('$') == Exception # Testando valor improvável
 assert tempo('bim') == Exception # Testando valor improvável
 
-print('Todos testes estão ok!!')
+print('Todos testes estão ok!')

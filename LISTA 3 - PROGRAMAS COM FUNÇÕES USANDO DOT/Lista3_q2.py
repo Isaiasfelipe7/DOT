@@ -1,3 +1,9 @@
+""" Lista3_q2. Escreva uma função que recebe as 3 notas de um aluno por parâmetro e uma
+letra. Se a letra for A o procedimento calcula a média aritmética das notas do
+aluno, se for P, a sua média ponderada (pesos: 5, 3 e 2). A função deve retornar
+a média calculada.
+"""
+
 def media(n1, n2, n3, letra):
     if type(n1) != int and type(n1) != float or type(n2) != int and type(n2) != float or type(n3) != int and type(n3) != float:
         return Exception
@@ -27,4 +33,4 @@ assert media(3.5,3.5,5,"A") == 4.0
 assert media(0,8,10,"A") == 6
 assert media(3,4,5,"P") == 3.7
 
-print('Todos testes estão ok!!')
+print('Todos testes estão ok!')

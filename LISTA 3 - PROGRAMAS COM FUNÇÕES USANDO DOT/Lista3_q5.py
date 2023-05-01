@@ -1,5 +1,11 @@
+""" Lista3_q5. Faça uma função que recebe a idade de uma pessoa em anos, meses e dias
+e retorna essa idade expressa em dias.
+"""
+
 def idade(anos, meses, dias):
-    if type(anos) != int and anos < 0 and anos > 120 or type(meses) != int and meses < 0 or type(dias) != int and dias < 0:
+    if type(anos) != int or type(meses) != int or type(dias) != int:
+        return Exception
+    if anos < 0 or meses < 0 or dias < 0:
         return Exception
 
     d_a = 365
@@ -17,4 +23,4 @@ assert idade(-1, 89, 1) == Exception # Testando classes inválidas
 assert idade(-7, -1, 0) == Exception # Testando classes inválidas
 assert idade('a', 3, 'i') == Exception # Testando classes inválidas
 
-print('Todos testes estão ok!!')
+print('Todos testes estão ok!')
