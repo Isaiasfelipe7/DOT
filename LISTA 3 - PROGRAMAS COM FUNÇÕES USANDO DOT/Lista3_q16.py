@@ -1,32 +1,25 @@
-import unittest
-from unittest.mock import patch
+""" Lista3_q16. Faça uma função que leia um número não determinado de valores positivos
+e retorna a média aritmética dos mesmos.
+"""
 
 def media_aritmetica():
-    # Inicializa as variáveis
-    soma = 0
-    contador = 0
+    s = 0
+    qtd = 0
 
-    # Loop para ler os valores
     while True:
-        valor = float(input("Digite um valor positivo (ou um valor negativo para encerrar): "))
-        if valor < 0:
+        valor = float(input('Digite um valor positivo (-1 para sair): '))
+
+        if valor == -1:
             break
-        soma += valor
-        contador += 1
 
-    # Verifica se há valores para calcular a média
-    if contador == 0:
+        s += valor
+        qtd += 1
+
+    if qtd == 0:
         return 0
+    
+    media_aritmetica = s / qtd
 
-    # Retorna a média aritmética
-    return soma / contador
+    return media_aritmetica
 
-
-def teste():
-    with patch('builtins.input', side_effect=['2', '3', '4', '-1']):
-        assert media_aritmetica() == [3]
-
-    with patch('builtins.input', side_effect=['8', '9', '10', '-1']):
-        assert media_aritmetica() == [9]
-
-        print('Todos testes ok!')
+print(f'A média aritmética dos valores digitados é {media_aritmetica()}')

@@ -5,7 +5,7 @@ salário da população, a média do número de filhos, o maior salário e o per
 de pessoas com salário até R$ 350,00.
 """
 
-def estatisticas(salario, filhos):
+def estatisticas():
     salario_ttl = 0
     filhos_ttl = 0
     pessoas = 0
@@ -13,8 +13,11 @@ def estatisticas(salario, filhos):
     salar_350 = 0
 
     while True:
-        if salario == 0:
+        salario = float(input('Salario do habitante: (-1 para sair): '))
+        if salario == -1:
             break
+
+        filhos = int(input('Número de filhos do habitante: '))
 
         salario_ttl += salario
         filhos_ttl += filhos
@@ -30,4 +33,9 @@ def estatisticas(salario, filhos):
 
     return media_salario, media_filhos, maior_salario, perc_350
 
-assert estatisticas() == ()
+medsa, medfi, maisa, perc_350 = estatisticas()
+
+print(f'\nMédia de salário: R${medsa:.2f}')
+print(f'Média de filhos: {medfi:.2f}')
+print(f'Maior salário: R${maisa:.2f}')
+print(f'Percentual de pessoas com salário até R$350,00: {perc_350:.2f}%')
