@@ -2,24 +2,24 @@
 e retorna a média aritmética dos mesmos.
 """
 
-def media_aritmetica():
-    s = 0
-    qtd = 0
-
-    while True:
-        valor = float(input('Digite um valor positivo (-1 para sair): '))
-
-        if valor == -1:
-            break
-
-        s += valor
-        qtd += 1
-
-    if qtd == 0:
-        return 0
+def calcular_media(lista):
+    if len(lista) == 0: # Testar se a lista é vazia
+        return Exception
     
-    media_aritmetica = s / qtd
+    som = 0
+    for i in range(len(lista)):
+        if type(lista[i]) != int or lista[i] < 0: # Testar se algum valor da lista 
+            return Exception                      # não é inteiro ou é negativo.
+        som += lista[i]
+    return som / len(lista)
 
-    return media_aritmetica
+assert calcular_media([1, 2, 4, 5]) == 3
+assert calcular_media([1, 1, 1, 1, 1, 1, 1, 1, 1]) == 1
+assert calcular_media([10]) == 10
+assert calcular_media([10, 5.4]) == Exception
+assert calcular_media([-1]) == Exception
+assert calcular_media([]) == Exception
+assert calcular_media([-2, 3]) == Exception
+assert calcular_media(['*', 5]) == Exception
 
-print(f'A média aritmética dos valores digitados é {media_aritmetica()}')
+print('Todos testes ok!')
