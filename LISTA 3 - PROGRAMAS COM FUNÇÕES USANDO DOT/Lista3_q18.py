@@ -11,4 +11,4 @@ def tabuada(n):
         for b in range(1, n+1):
             print(f'{i} x {b} = {i*b}')
 
-tabuada(5)
+tabuada(10)
