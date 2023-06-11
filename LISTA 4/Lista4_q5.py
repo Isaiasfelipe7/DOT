@@ -26,4 +26,4 @@ assert soma_cumulativa([]) == Exception
 assert soma_cumulativa([1.9, 2, 1]) == Exception
 assert soma_cumulativa([1, 2, 3]) == [1, 3, 6]
 
-print('Todos testes ok!')
+print('Testes ok!')
