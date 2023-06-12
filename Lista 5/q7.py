@@ -6,6 +6,7 @@ faltando, e retorne o elemento que está faltando. Ex: [4,3,1,5] = 2
 def encontrar_elemento_faltante(l):
     if type(l) != list or len(l) < 2:
         return Exception
+    
     if (max(l) - len(l)) > 1 or (max(l) == len(l)):
         return Exception
     
