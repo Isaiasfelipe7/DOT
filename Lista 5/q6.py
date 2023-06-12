@@ -23,5 +23,6 @@ assert contar_substrings(2, 'y') == Exception
 assert contar_substrings('x', 5) == Exception
 assert contar_substrings('', 'in') == Exception
 assert contar_substrings('banana', 'an') == 2
+assert contar_substrings('abracadabra' , 'abra') == 2
 
 print('Testes ok!')
