@@ -7,7 +7,7 @@ def encontrar_elemento_repetido(lista):
         return Exception
     
     for i in lista:
-        if type(i) != int or type(i) != float:
+        if type(i) != int and type(i) != float:
             return Exception
         
     contador = {}
@@ -17,22 +17,24 @@ def encontrar_elemento_repetido(lista):
         else:
             contador[num] += 1
     
-    num_repetido = 0
-    cont_repeat = 0
-    cont = 0
+    num_repetido = None
+    num_ocorr = 0
 
-    for i in contador:
-        if contador[i] > cont_repeat and contador[i] != 1:
-            num_ocorr = contador[i]
-            num_repetido = i
-        if contador[i] != 1:
-            cont += 1
+    for num, cont in contador.items():
+        if cont > num_ocorr:
+            num_ocorr = cont
+            num_repetido = num
 
-    return num_repetido if num_ocorr > cont else Exception
-    
+    return num_repetido if num_ocorr > 1 else Exception
+
+
 assert encontrar_elemento_repetido([]) == Exception
 assert encontrar_elemento_repetido(['s', 2]) == Exception
 assert encontrar_elemento_repetido(['']) == Exception
-assert encontrar_elemento_repetido([1, 7,7, 9, 0, 0, 0]) == 0
+assert encontrar_elemento_repetido([-1, -65.34, -34, -34]) == -34
+assert encontrar_elemento_repetido([1, 7, 7, 9, 0, 0, 0]) == 0
+assert encontrar_elemento_repetido([14, 38, 75, 90, 14, 6, 75, 75, 14, 8, 14]) == 14
 
 print('Testes ok!')
+
+
