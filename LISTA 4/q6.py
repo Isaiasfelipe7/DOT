@@ -8,3 +8,4 @@ assert verificar_ordem_ascendente([1, 2, 3]) == True
 assert verificar_ordem_ascendente([3, 7, 2]) == False
 
 print('Testes ok!')
+
