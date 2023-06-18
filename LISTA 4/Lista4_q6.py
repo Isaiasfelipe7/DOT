@@ -12,7 +12,7 @@ def verificar_ordem_ascendente(lista):
             return Exception
         
     for i in range(len(lista) - 1):
-        if lista[i] > lista[i + 1]:
+        if lista[i] > lista[i+1]:
             return False
     return True
 

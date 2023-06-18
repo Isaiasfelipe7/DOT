@@ -25,6 +25,7 @@ def soma_qualquer_segmento(lista):
     return soma_max
 
 assert soma_qualquer_segmento([]) == Exception
+assert soma_qualquer_segmento(['s', 8, -5, -5, 3, 10, 2, -9, 4]) == Exception
 assert soma_qualquer_segmento([5, -2, -2, -7, 3, 15, 10, -3, 9,
 -6, 4, 1]) == 34
 

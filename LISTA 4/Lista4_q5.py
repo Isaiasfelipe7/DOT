@@ -20,10 +20,11 @@ def soma_cumulativa(lista):
 
         list_cumulativa.append(soma)
     
-    return list_cumulativa 
+    return list_cumulativa
 
 assert soma_cumulativa([]) == Exception
 assert soma_cumulativa([1.9, 2, 1]) == Exception
 assert soma_cumulativa([1, 2, 3]) == [1, 3, 6]
+assert soma_cumulativa([3, 4, 5, 6]) == [3, 7, 12, 18]
 
 print('Testes ok!')

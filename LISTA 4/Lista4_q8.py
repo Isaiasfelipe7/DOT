@@ -29,6 +29,7 @@ def mais_proximo(lista):
 
 assert mais_proximo([]) == Exception
 assert mais_proximo(["*", 2, 8.9, 2]) == Exception
+assert mais_proximo([2]) == 2
 assert mais_proximo([1, 3.5, 8, 4.3]) == 4.3
 assert mais_proximo([2.5, 7.5, 10.0, 4.0]) == 7.5
 
