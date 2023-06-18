@@ -8,7 +8,7 @@ def calcular_media(lista):
     
     som = 0
     for i in range(len(lista)):
-        if type(lista[i]) != int or lista[i] < 0: # Testar se algum valor da lista 
+        if type(lista[i]) != int and type(lista[i]) != float or lista[i] < 0: # Testar se algum valor da lista 
             return Exception                      # não é inteiro ou é negativo.
         som += lista[i]
     return som / len(lista)
@@ -16,7 +16,7 @@ def calcular_media(lista):
 assert calcular_media([1, 2, 4, 5]) == 3
 assert calcular_media([1, 1, 1, 1, 1, 1, 1, 1, 1]) == 1
 assert calcular_media([10]) == 10
-assert calcular_media([10, 5.4]) == Exception
+assert calcular_media([10, 5.4]) == 7.7
 assert calcular_media([-1]) == Exception
 assert calcular_media([]) == Exception
 assert calcular_media([-2, 3]) == Exception

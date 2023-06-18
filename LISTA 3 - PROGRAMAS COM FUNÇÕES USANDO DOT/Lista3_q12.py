@@ -18,6 +18,6 @@ assert crescente(10, 8) == (8, 10)
 assert crescente(1, 82) == (1, 82)
 assert crescente(452, 123) == (123, 452)
 assert crescente(2.3, 69) == Exception
-assert crescente(67, 4.7) ==Exception
+assert crescente(67, 4.7) == Exception
 
 print('Todos testes ok!')
