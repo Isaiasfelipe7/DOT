@@ -22,5 +22,6 @@ assert encontrar_elemento_faltante([4, 3, 1, 6]) == Exception
 assert encontrar_elemento_faltante([1, 2, 3, 4,]) == Exception
 assert encontrar_elemento_faltante([4, 3, 1, 5]) == 2
 assert encontrar_elemento_faltante([3, 5, 2, 1, 7, 9,10, 8, 4]) == 6
+assert encontrar_elemento_faltante([2, 5, 3, 7, 6, 9, 8, 4]) == 1
 
 print('Testes ok!')
